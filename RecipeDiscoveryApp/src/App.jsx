@@ -24,16 +24,6 @@ export default function App() {
   );
 }
 
-export default function App() {
- const [meals, setMeals] = useState([])
 
-  return (
-    <>
-    <BrowseCategory />
-    
-    <Recipe meals={data?.meals || []} />
-    </>
-  );
-}
 
 
