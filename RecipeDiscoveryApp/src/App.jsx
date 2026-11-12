@@ -1,7 +1,28 @@
-import './App.css'
-import {BrowseCategory} from './components/category';
-import Recipe from './components/recipeCard';
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
+import CategoryPage from "./pages/CategoryPage";
+import RecipeDetailPage from "./pages/RecipeDetailPage";
+import FavoritesPage from "./pages/FavoritesPage";
+import SearchPage from "./pages/SearchPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import "./App.css";
 
+export default function App() {
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/category/:name" element={<CategoryPage />} />
+        <Route path="/recipe/:id" element={<RecipeDetailPage />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </>
+  );
+}
 
 export default function App() {
  const [meals, setMeals] = useState([])
@@ -9,8 +30,8 @@ export default function App() {
   return (
     <>
     <BrowseCategory />
-    <RecipeCard />
-    <Recipe meals={meals} />
+    
+    <Recipe meals={data?.meals || []} />
     </>
   );
 }

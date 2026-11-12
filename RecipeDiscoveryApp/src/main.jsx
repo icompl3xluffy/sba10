@@ -5,6 +5,10 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <BrowserRouter>
+      <FavoritesProvider>
+          <App />
+      </FavoritesProvider>
+  </BrowserRouter>
   </StrictMode>,
 )

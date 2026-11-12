@@ -1,10 +1,10 @@
 import RecipeCard from "./recipeCard";
 
-export default function Recipe({ meals }) {
+export default function Recipe({ meal=[] }) {
   return (
     <div>
       <ul>
-        {meals.map((meal) => (
+        {meal.map((meal) => (
           <RecipeCard key={meal.idMeal} meal={meal} />
         ))}
       </ul>
