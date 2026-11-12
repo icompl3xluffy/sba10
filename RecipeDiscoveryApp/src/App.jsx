@@ -2,11 +2,12 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import CategoryPage from "./pages/CategoryPage";
-import RecipeDetailPage from "./pages/RecipeDetailPage";
+import RecipeDetailPage from "./pages/RecipeDetailpg";
 import FavoritesPage from "./pages/FavoritesPage";
 import SearchPage from "./pages/SearchPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import "./App.css";
+
 
 export default function App() {
   return (

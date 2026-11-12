@@ -2,9 +2,34 @@
  import { useContext } from "react";
 import { FavoritesContext } from "../context/favoritesContext";
 
+
 export default function Instruction({ recipe }) {
   const { addFavorite, removeFavorite, isFavorite } =
     useContext(FavoritesContext);
+
+
+  const ingredients = [];
+  for (let i = 1; i <= 20; i++) {
+    const item = recipe[`strIngredient${i}`];
+    const amount = recipe[`strMeasure${i}`];
+    if (item && item.trim()) {
+      ingredients.push(`${amount} ${item}`);
+    }
+  }
+
+  const saved = isFavorite(recipe.idMeal);
+
+  function handleClick() {
+    if (saved) {
+      removeFavorite(recipe.idMeal);
+    } else {
+      addFavorite({
+        idMeal: recipe.idMeal,
+        strMeal: recipe.strMeal,
+        strMealThumb: recipe.strMealThumb,
+      });
+    }
+  }
 
   return (
     <div className="detail">
@@ -23,7 +48,6 @@ export default function Instruction({ recipe }) {
 
       <h2>Instructions</h2>
       <p>{recipe.strInstructions}</p>
-   </div>
+    </div>
   );
 }
-          

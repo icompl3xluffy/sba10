@@ -1,4 +1,3 @@
-import RecipeCard from "./recipeCard";
 
 export default function Recipe({ meal=[] }) {
   return (

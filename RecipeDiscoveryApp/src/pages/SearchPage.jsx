@@ -2,10 +2,6 @@ import { useSearchParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import RecipeCard from "../components/RecipeCard";
 
-import { useSearchParams } from "react-router-dom";
-import useFetch from "../hooks/useFetch";
-import RecipeCard from "../components/RecipeCard";
-
 export default function SearchPage() {
   const [searchParams] = useSearchParams();
   const query = searchParams.get("query") || "";
