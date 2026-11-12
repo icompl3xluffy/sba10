@@ -5,7 +5,7 @@ import { FavoritesContext } from "../context/favoritesContext";
 
 export default function Instruction({ recipe }) {
   const { addFavorite, removeFavorite, isFavorite } =
-    useContext(favoritesContext);
+    useContext(FavoritesContext);
 
 
   const ingredients = [];
@@ -35,9 +35,12 @@ export default function Instruction({ recipe }) {
     <div className="detail">
       <h1>{recipe.strMeal}</h1>
       <img src={recipe.strMealThumb} alt={recipe.strMeal} />
-      <button onClick={handleClick}>
-        {saved ? "Remove from Favorites" : "Add to Favorites"}
-      </button>
+      <button
+     className={saved ? "fav-btn remove" : "fav-btn add"}
+      onClick={handleClick}
+      >
+      {saved ? "Remove from Favorites" : "Add to Favorites"}
+    </button>
 
       <h2>Ingredients</h2>
       <ul>
