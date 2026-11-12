@@ -5,7 +5,7 @@ import { FavoritesContext } from "../context/favoritesContext";
 
 export default function Instruction({ recipe }) {
   const { addFavorite, removeFavorite, isFavorite } =
-    useContext(FavoritesContext);
+    useContext(favoritesContext);
 
 
   const ingredients = [];

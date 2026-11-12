@@ -1,10 +1,14 @@
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import useDebounce from "../hooks/useDebounce";
+
 
 export default function Navbar() {
   const [input, setInput] = useState("");
   const debounced = useDebounce(input, 500);
   const navigate = useNavigate();
 
-  // after the user stops typing, go to the search page
+  
   useEffect(() => {
     if (debounced.trim()) {
       navigate(`/search?query=${encodeURIComponent(debounced.trim())}`);

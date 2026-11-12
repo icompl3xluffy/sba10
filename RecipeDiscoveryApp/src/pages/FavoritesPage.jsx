@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FavoritesContext } from "../context/favoritesContext";
-import RecipeCard from "../components/RecipeCard";
+import RecipeCard from "../components/recipeCard";
 
 export default function FavoritesPage() {
   const { favorites } = useContext(FavoritesContext);

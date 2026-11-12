@@ -5,13 +5,11 @@ export default function FavoritesProvider({ children }) {
   const [favorites, setFavorites] = useLocalStorage("favorites", []);
 
   function addFavorite(recipe) {
-    
-      setFavorites([...favorites, recipe])
+    setFavorites([...favorites, recipe]);
   }
 
   function removeFavorite(id) {
-   setFavorites(favorites.filter((recipe) => recipe.idMeal !== id))
-
+    setFavorites(favorites.filter((recipe) => recipe.idMeal !== id));
   }
 
   function isFavorite(id) {

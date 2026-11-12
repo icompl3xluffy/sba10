@@ -1,7 +1,7 @@
 
 import { useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
-import RecipeCard from "../components/RecipeCard";
+import RecipeCard from "../components/recipeCard";
 
 export default function CategoryPage() {
   const { name } = useParams();

@@ -12,6 +12,7 @@ import "./App.css";
 export default function App() {
   return (
     <>
+    
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
