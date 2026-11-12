@@ -26,5 +26,4 @@ export default function Instruction({ recipe }) {
    </div>
   );
 }
-            </Link>
-        </div> 
+          
