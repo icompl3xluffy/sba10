@@ -1,17 +1,16 @@
-// browse by category
+import { Link } from "react-router-dom";
 
 export default function BrowseCategory(props) {
  const{ idCategory,  strCategory, strCategoryThumb, strCategoryDescription}=props
 
-    // May add instruction and steps: They should be able to click the card to get to the instruction and recipie page
 
     return(
         <div className="card">
-            
-            <h2>{strCategory}</h2>
-            <img src={strCategoryThumb}/>
-            <p>{strCategoryDescription}</p>
-
+            <Link to={`/category/${strCategory}`}>
+                <h2>{strCategory}</h2>
+                <img src={strCategoryThumb} alt={strCategory}/>
+                <p>{strCategoryDescription}</p>
+            </Link>
         </div>
     );
 }

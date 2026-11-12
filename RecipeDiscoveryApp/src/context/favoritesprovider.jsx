@@ -10,13 +10,12 @@ export default function FavoritesProvider({ children }) {
   }
 
   function removeFavorite(id) {
-   favorites.filter((recipe) => recipe.idMeal !== id)
+   setFavorites(favorites.filter((recipe) => recipe.idMeal !== id))
 
   }
 
   function isFavorite(id) {
-    favorites.some=== recipe.id
-    return recipe
+    return favorites.some((recipe) => recipe.idMeal === id);
   }
 
   return (

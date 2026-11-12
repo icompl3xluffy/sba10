@@ -1,14 +1,13 @@
-import BrowseCategory from "./category";
+import RecipeCard from "./recipeCard";
 
-export default Recipe(){
-    
-    return(
-        <div>
-            <ul>
-                <RecipeCard id={idCategory} category={strCategory} descrioption={strCategoryDescription} thumbnail={strCategoryThumb}/>
-            </ul>
-
-        //  <button Onclick>View</button>
-        </div>   
-    );
+export default function Recipe({ meals }) {
+  return (
+    <div>
+      <ul>
+        {meals.map((meal) => (
+          <RecipeCard key={meal.idMeal} meal={meal} />
+        ))}
+      </ul>
+    </div>
+  );
 }
