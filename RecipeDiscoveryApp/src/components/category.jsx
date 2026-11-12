@@ -11,8 +11,6 @@ export default function BrowseCategory(props) {
             <h2>{strCategory}</h2>
             <img src={strCategoryThumb}/>
             <p>{strCategoryDescription}</p>
-            {/* button to get to ingredients and recipie page  */}
-            {/* <button></button> */}
 
         </div>
     );
